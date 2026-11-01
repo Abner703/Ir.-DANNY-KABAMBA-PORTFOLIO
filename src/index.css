@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-chalk: #F8F9FA;
+  --color-slate-tech: #E9ECEF;
+  --color-slate-border: #DDE2E5;
+  --color-anthracite: #1E242B;
+  --color-anthracite-muted: #4B5563;
+  --color-steel: #2B4C6F;
+  --color-steel-dark: #1E3752;
+  --color-steel-light: #3D648F;
+  --color-sage: #3B7A57;
+  --color-sage-dark: #2F6246;
+  --color-sage-light: #4A966E;
+  --color-copper: #C87D55;
+  --color-copper-light: #DF9B76;
+}
+
+/* Base smooth scroll behavior (disabled on reduced motion) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Progressive enhancement: Si JavaScript est désactivé, le contenu est 100% visible immédiatement */
+html:not(.js) * {
+  opacity: 1 !important;
+  transform: none !important;
+  stroke-dashoffset: 0 !important;
+  clip-path: none !important;
+}
+
+/* Focus clavier accessible : contour net 2px en Bleu Acier avec décalage de 2px */
+:focus-visible {
+  outline: 2px solid #2B4C6F !important;
+  outline-offset: 2px !important;
+}
+
+/* Micro-interaction : liens texte avec soulignement qui se dessine de gauche à droite (200ms) */
+.link-conductor {
+  position: relative;
+  text-decoration: none;
+}
+.link-conductor::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: #C87D55;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.link-conductor:hover::after,
+.link-conductor:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Animation d'apparition douce fadeUp */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessible reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}

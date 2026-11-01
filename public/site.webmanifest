@@ -1,0 +1,16 @@
+{
+  "name": "Daniel Kabamba - Ingénieur Électricien & Énergétique",
+  "short_name": "Daniel Kabamba",
+  "description": "Portfolio professionnel de Daniel Kabamba, ingénieur électricien et énergétique à Kinshasa (RDC).",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F9FA",
+  "theme_color": "#F8F9FA",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
