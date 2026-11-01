@@ -216,7 +216,9 @@ export const PROJECTS: Project[] = [
       'Participation au câblage des armoires de distribution',
       'Contrôle qualité et respect des règles strictes de sécurité du site',
     ],
-    imagePlaceholderText: 'Photo des chantiers Ecobank à ajouter',
+    imagePlaceholderText: 'Photo du chantier Ecobank',
+    imageUrl: '/assets/aistudio/IMG-20261101-WA0020_f66adcfa.jpg',
+    imagePosition: 'center 32%',
     keyTechnicalAspect: 'Infrastructure tertiaire bancaire multisite',
   },
 ];

@@ -70,7 +70,7 @@ export const ElectricalPage: React.FC<ElectricalPageProps> = () => {
               Exemples de chantiers réalisés à Kinshasa
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {buildingProjects.slice(0, 4).map((p, idx) => (
+              {buildingProjects.map((p, idx) => (
                 <Reveal key={p.id} delay={idx * 60} className="bg-white p-5 rounded-md border border-[#DDE2E5] space-y-3">
                   {p.imageUrl && (
                     <div className="relative aspect-[4/3] sm:aspect-[16/9] w-full bg-[#E9ECEF] rounded overflow-hidden">
